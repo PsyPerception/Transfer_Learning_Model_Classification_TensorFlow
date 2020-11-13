@@ -9,7 +9,7 @@ import os
 
 """Заранее зададим переменные шага обучения и пути к папке с нашими изображениями для обучения"""
 BATCH_SIZE = 32  # шаг обучения
-path = r'D:\Work\Py_Projects\doc_class\train_data'  # наш путь
+path = r'D:\Work\Py_Projects\doc_class\train_data'  # наш путь к изображениям
 
 def get_count_files(path):
     """ Функция получения общего кол-ва файлов в папке с нашими изображениями"""
@@ -60,6 +60,6 @@ TRAIN_STEPS_PER_EPOCH = np.ceil((get_count_files(path) * 0.8 / BATCH_SIZE) - 1)
 model.compile(optimizer=Adadelta(lr=0.003), loss='categorical_crossentropy', metrics=['accuracy'])  #компилируем (собираем) модель
 step_size_train = TRAIN_STEPS_PER_EPOCH
 model.fit_generator(generator=train_generator, # старт обучения модели
-                    steps_per_epoch=150,
+                    steps_per_epoch=TRAIN_STEPS_PER_EPOCH,
                     epochs=1)
 model.save('model_new.h5') # сохранение полученной модели
