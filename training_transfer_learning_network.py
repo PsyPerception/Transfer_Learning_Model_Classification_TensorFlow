@@ -46,7 +46,7 @@ for layer in model.layers[20:]:
 3. Цветовая схема: RGB или Gray(цветные будут изображения или черно-белые)
 4. Размер "шага" обучения. Менять на свое усмотрение, при знании дела. 
 5. Режим классификации. 
-6. Режим перемешивания входящих изображений.
+6. Режим перемешивания входящих изображений- да/нет.
 """
 train_datagen = ImageDataGenerator(preprocessing_function=preprocess_input)
 train_generator = train_datagen.flow_from_directory(path,
