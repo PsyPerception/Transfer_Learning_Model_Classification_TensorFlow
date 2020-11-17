@@ -1,6 +1,5 @@
 import os
-
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' # ограничение выдачи лога бэкендом tensorflow
 import keras
 import numpy as np
 from tensorflow.keras.preprocessing import image
