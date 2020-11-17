@@ -19,4 +19,4 @@ from keras.models import Model
 from keras.optimizers import Adadelta
 ```
 Проверьте, что эти импорты корректно работают.
-Так же, стоит обратить внимание - если вы уже пользовались [трансферным обучением](https://academy.yandex.ru/posts/transfernoe-obuchenie-pochemu-deep-learning-stal-dostupnee)  - стоит удалить скачанные модели MobileNet. По умолчанию они лежат в ***C:\Users\"User Name"\.keras\models*** и имеют название по типу **mobilenet_1_0_224_tf_no_top.h5**. Это связано с несостыковкой версий моделей с версией используемого Keras.
+Так же, стоит обратить внимание - если вы уже пользовались [трансферным обучением](https://academy.yandex.ru/posts/transfernoe-obuchenie-pochemu-deep-learning-stal-dostupnee)  - стоит удалить скачанные модели MobileNet. По умолчанию они лежат в ***C:\Users\\"User Name"\\.keras\models*** и имеют название по типу **mobilenet_1_0_224_tf_no_top.h5**. Это связано с несостыковкой версий моделей с версией используемого Keras.
